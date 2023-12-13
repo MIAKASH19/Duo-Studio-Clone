@@ -1,0 +1,432 @@
+@font-face {
+    font-family: ppmori;
+    src: url(./PPMori-Regular.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ppmori;
+    color: black;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.cursor{
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: fixed;
+    z-index: 8;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #EDBFFF;
+    mix-blend-mode:difference;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+.circlemenu{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #EDBFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+    gap: 10px;
+    z-index: 99;
+    opacity: 0;
+}
+.circlemenu a{
+    font-size: 7vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #111;
+    pointer-events: all;
+}
+.purple{
+    height: 100vh;
+    width: 100vw;
+    background: #EDBFFF;
+    z-index: 8;
+    pointer-events: none;
+    opacity: 0;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+.menu-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-text>h1{
+    display: inline-block;
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: #111;
+    animation-name: scroll;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    margin-right: 30px;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 32px));
+    }
+}
+.main{
+    background-color: white;
+    /* cursor: none; */
+}
+.active{
+    border-bottom: 3px solid #e6a7ff;
+}
+.secondactive{
+    border-bottom: 3px solid #000000;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0 2vw;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+.nav img{
+    height: 40%;
+}
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.nav-center a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-weight: 600;
+    z-index: 99;
+    color: #fff;
+}
+.nav-right .circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.nav-center a .active{
+    border-bottom: 2px solid white;
+}
+
+.sec{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 0 3vw;
+}
+.left{
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+    border-right: 1px solid black;
+}
+.text{
+    width: 100%;
+    height: 68%;
+    /* background: goldenrod; */
+    margin-top: 7vw;
+}
+
+.studio h1{
+    font-size: 7.5vw;
+    font-weight: 500;
+    letter-spacing: -5px;
+    line-height: 1;
+}
+.title1, .title2{
+    height: fit-content;
+    overflow: hidden;
+}
+.title1 h1,
+.title2 h1{
+    /* font-size: 2.8vw; */
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
+    color: #111;
+    transform: translateY(35px) rotate(5deg);
+    transform-origin: left;
+}
+.info{
+    display: flex;
+    width: 100%;
+    height: 8%;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    padding-right: 2%;
+}
+.info h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+.info h6 a{
+    text-decoration: none;
+}
+.info h6{
+    font-size: 1vw;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.right{
+    height: 100%;
+    width: 50%;
+    padding: 3vw 0vw;
+    margin-left: 3vw;
+}
+.top{
+    height: 68%;
+    width: 100%;
+    margin-top: 4vw;
+    /* background-color: red; */
+}
+.top h2{
+    font-size: 2.7vw;
+}
+.top input{
+    border: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 2vw;
+}
+.top input::placeholder{
+    font-size: 1.6vw;
+    opacity: 0.6;
+}
+.bottom{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    position: relative;
+}
+.inputfield{
+    width: 60%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.inputfield input{
+    width: 100%;
+    height: 30%;
+    border: none;
+    border-bottom: 1.5px solid black;
+}
+.magnetarea{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    margin-top: -2%;
+}
+.bottom a{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    background: #EDBFFF;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    overflow: hidden;
+}
+a > span{
+    font-size: 15px;
+    color: black;
+    transition: transform 0.1s ease-out;
+}
+.bottom a:hover{
+    background: #111;
+}
+.bottom a:hover span{
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .cursor{
+        opacity: 0;
+    }
+    .circlemenu a{
+        font-size: 7vh;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #111;
+    }
+    .nav-right .circle{
+        pointer-events: all;
+    }
+    .nav-center{
+        display: none;
+    }
+    
+
+    .sec{
+        height: 150vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 3vw;
+    }
+    .left{
+        height: 100%;
+        width: 100%;
+        /* background-color: red; */
+        border-right: none;
+        margin-top: 3vh;
+    }
+    .text{
+        width: 100%;
+        height: 68%;
+        /* background: goldenrod; */
+        margin-top: 10vh;
+    }
+    
+    .studio h1{
+        font-size: 11vh;
+        font-weight: 500;
+        letter-spacing: -5px;
+        line-height: 1;
+    }
+    .title1, .title2{
+        height: fit-content;
+        overflow: hidden;
+    }
+    .title1 h1,
+    .title2 h1{
+        color: #111;
+        transform: translateY(35px) rotate(5deg);
+        transform-origin: left;
+    }
+    .info{
+        display: flex;
+        width: 100%;
+        height: 30%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        /* background-color: yellow; */
+        padding: 5% 0;
+        padding-right: 2%;
+    }
+    .info>div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .info h5{
+        font-size: 2.4vh;
+        font-weight: 600;
+    }
+    
+    .info h6{
+        font-size: 2.3vh;
+    }
+    .right{
+        height: 100%;
+        width: 100%;
+        padding: 5vh 0vw;
+        margin-left: 1vh;
+        margin-top: 10%;
+    }
+    .top{
+        height: 68%;
+        width: 100%;
+        margin-top: 4vh;
+        /* background-color: red; */
+    }
+    .top h2{
+        font-size: 4.3vh;
+    }
+    .top input::placeholder{
+        font-size: 2.2vh;
+    }
+    .bottom{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: yellow; */
+        position: relative;
+    }
+    .inputfield{
+        width: 60%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+    }
+    .inputfield input{
+        width: 100%;
+        height: 40%;
+        border: none;
+        background: transparent;
+        border-bottom: 1.5px solid black;
+    }
+    .magnetarea{
+        height: 130px;
+        width: 130px;
+        position: relative;
+        /* border: 2px solid black; */
+        border-radius: 50%;
+        margin-top: -1vh;
+    }
+    .bottom a{
+        transform: translate(-25%, -60%);
+        width: 100px;
+        height: 100px;
+    }
+
+    a > span{
+        font-size: 12px;
+    }
+
+
+
+
+
+}
