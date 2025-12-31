@@ -4,10 +4,8 @@ Duo – Studio is a modern agency website clone created to practice and enhance 
 
 The goal of this project is to improve UI accuracy, animation flow, and component structuring using modern frontend technologies.
 
-🚀 Live Preview
-
-🔗 Add your live link here (if deployed)
-Example: https://your-live-link.com
+🔗 Add your live link here 
+Example: https://miakash19.github.io/Duo-Studio-Clone
 
 ✨ Features
 
@@ -50,21 +48,6 @@ Component-based architecture in React
 
 Clean and maintainable frontend code
 
-📂 Project Setup
-
-To run this project locally:
-
-# Clone the repository
-git clone https://github.com/your-username/duo-studio.git
-
-# Go to the project directory
-cd duo-studio
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
 
 🎯 Purpose of the Project
 
